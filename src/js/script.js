@@ -114,7 +114,6 @@ window.addEventListener('DOMContentLoaded', () => {
             let card = document.createElement('div');
             card.classList.add('goods__item');
             card.innerHTML = `
-                 
                     <img class="goods__img" src="${item.url}" alt="phone">
                     <div class="goods__colors">Доступно цветов: 4</div>
                     <div class="goods__title"> ${item.title}
@@ -123,9 +122,10 @@ window.addEventListener('DOMContentLoaded', () => {
                         <span>${item.price}</span> руб/шт
                     </div>
                     <button class="goods__btn">Добавить в корзину</button>
-      `
+      `;
+            goodsWrapper.appendChild(card);
         });
-        goodsWrapper.appendChild(card);
+
     }
 
     loadContent('js/db.json');
